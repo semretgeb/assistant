@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Semret Gebru — Executive Assistant</title>
+<meta name="description" content="Executive and operations assistant in Addis Ababa. Government processes, payments, records and daily reporting — with proof.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,420;0,9..144,560;1,9..144,420&family=Public+Sans:ital,wght@0,400;0,500;0,620;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F5EF;
+    --card: #FFFFFF;
+    --ink: #1E2A32;
+    --ink-soft: #52606B;
+    --green: #19705B;
+    --line: #DDD7C9;
+    --brass: #8A6B1F;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Public Sans", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  a { color: var(--green); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 2px; }
+  .page { max-width: 760px; margin: 0 auto; padding: 0 16px 90px; }
+
+  /* header */
+  header { padding: 58px 0 34px; border-bottom: 1px solid var(--line); }
+  .kicker { color: var(--ink-soft); font-size: 16px; }
+  h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 560;
+    font-size: clamp(44px, 9vw, 72px);
+    line-height: 1.04;
+    letter-spacing: -0.5px;
+    margin: 10px 0 18px;
+  }
+  .contacts { display: flex; flex-wrap: wrap; gap: 8px 26px; font-size: 16px; }
+  .contacts span { color: var(--ink-soft); }
+
+  /* intro */
+  .intro { padding: 36px 0 8px; font-size: 19.5px; line-height: 1.7; max-width: 640px; }
+  .intro p + p { margin-top: 16px; }
+  .intro strong { font-weight: 620; }
+
+  /* sections */
+  section { margin-top: 58px; }
+  h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 560;
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .section-note { color: var(--ink-soft); margin-bottom: 22px; max-width: 600px; }
+
+  /* the daily report artifact */
+  .report {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 5px solid var(--green);
+    border-radius: 6px;
+    box-shadow: 0 14px 34px rgba(30, 42, 50, 0.08);
+    padding: 30px 32px 26px;
+    max-width: 640px;
+  }
+  .report-head {
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px;
+    padding-bottom: 14px; margin-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+    font-size: 15.5px;
+  }
+  .report-head .title { font-weight: 620; }
+  .report-head .meta { color: var(--ink-soft); }
+  .report h3 { font-size: 15px; font-weight: 620; color: var(--brass); margin: 18px 0 8px; }
+  .report ul { list-style: none; }
+  .report li { padding-left: 28px; position: relative; margin-bottom: 7px; font-size: 16px; }
+  .report li.done::before { content: "✓"; position: absolute; left: 2px; color: var(--green); font-weight: 620; }
+  .report li.open::before { content: "–"; position: absolute; left: 4px; color: var(--ink-soft); }
+  .sample-tag {
+    display: inline-block; margin-top: 20px;
+    font-size: 13.5px; color: var(--ink-soft);
+    border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px;
+  }
+
+  /* records list (government processes) */
+  .records { list-style: none; max-width: 640px; }
+  .records li {
+    display: grid; grid-template-columns: 26px 1fr; gap: 12px;
+    padding: 15px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .records li:first-child { border-top: 1px solid var(--line); }
+  .records .tick { color: var(--green); font-weight: 620; }
+  .records .what { font-weight: 620; }
+  .records .how { color: var(--ink-soft); font-size: 16px; }
+
+  /* two-column proof sections */
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  @media (max-width: 680px) { .pair { grid-template-columns: 1fr; gap: 0; } .pair section { margin-top: 58px; } .pair section:first-child { margin-top: 0; } }
+  .plain { list-style: none; }
+  .plain li { padding-left: 20px; position: relative; margin-bottom: 10px; }
+  .plain li::before { content: ""; position: absolute; left: 2px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: var(--green); opacity: 0.55; }
+
+  /* closing */
+  .closing {
+    margin-top: 64px; padding-top: 30px;
+    border-top: 1px solid var(--line);
+    max-width: 640px;
+  }
+  .closing p { margin-bottom: 14px; }
+  .closing .fine { color: var(--ink-soft); font-size: 15.5px; }
+  .langs { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 26px; }
+  .langs span {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 999px; padding: 6px 16px; font-size: 15.5px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <p class="kicker">Addis Ababa — available for in-person work across the city</p>
+    <h1>Semret Gebru</h1>
+    <p class="contacts">
+      <a href="mailto:semrey14@gmail.com">semrey14@gmail.com</a>
+      <a href="https://t.me/semreyy">Telegram</a>
+      <a href="https://github.com/semretgeb">GitHub</a>
+      <span>+251 945 215 940</span>
+    </p>
+  </header>
+
+  <div class="intro">
+    <p>I'm applying to be your executive assistant. I run a small registered company of my own — a Telegram commerce platform used by small shops — so the work this role describes is work I already do: <strong>government offices, banks and payment providers, vendor coordination, records, and daily follow-through</strong>.</p>
+    <p>I'm a computer science graduate (HiLCoE, 2026), fluent in Amharic with professional English, and I write things down so nothing gets lost.</p>
+  </div>
+
+  <section>
+    <h2>The daily report, as I'd write it</h2>
+    <p class="section-note">The posting asks for a concise daily written report. Here's the format I'd send at the end of each day — short enough to read in a minute, complete enough to act on.</p>
+    <div class="report">
+      <div class="report-head">
+        <span class="title">Daily report — Thursday</span>
+        <span class="meta">To: Founder</span>
+      </div>
+      <h3>Done today</h3>
+      <ul>
+        <li class="done">Licence renewal submitted at the sub-city office; stamped receipt scanned and filed in Drive</li>
+        <li class="done">Two vendor invoices paid within budget; expense sheet updated</li>
+        <li class="done">Friday 10:00 confirmed with the accountant; one-page brief attached</li>
+      </ul>
+      <h3>Needs your decision</h3>
+      <ul>
+        <li class="open">Notary needs the signed resolution before Tuesday — draft is ready for your signature</li>
+      </ul>
+      <h3>Tomorrow</h3>
+      <ul>
+        <li class="open">Collect the bank confirmation letter; follow up the internet installation</li>
+      </ul>
+      <span class="sample-tag">Sample report with example items</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Processes I've completed myself</h2>
+    <p class="section-note">For my own company — so I know the forms, the queues, the fees and the follow-ups first-hand, not from a description.</p>
+    <ul class="records">
+      <li><span class="tick">✓</span><span><span class="what">Business TIN registration</span><br><span class="how">Obtained for my company at the revenue office</span></span></li>
+      <li><span class="tick">✓</span><span><span class="what">Trade licence</span><br><span class="how">Issued and kept current</span></span></li>
+      <li><span class="tick">✓</span><span><span class="what">Payment-provider merchant onboarding</span><br><span class="how">Compliance documents prepared and submitted to Chapa for a merchant account</span></span></li>
+      <li><span class="tick">✓</span><span><span class="what">University and team administration</span><br><span class="how">Coordinated a four-person senior project to fixed deadlines at HiLCoE</span></span></li>
+    </ul>
+  </section>
+
+  <div class="pair">
+    <section>
+      <h2>Running my own operation</h2>
+      <p class="section-note">ShopBot, the platform I built and operate, is a daily exercise in this role's duties.</p>
+      <ul class="plain">
+        <li>Coordinate shop owners and customers every day, in Amharic and English</li>
+        <li>Handle subscriptions and payments; reconcile what was paid against records</li>
+        <li>Keep licences, receipts, product data and agreements organised and findable</li>
+        <li>Write plans and documentation that other people can follow without me in the room</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Systems I build</h2>
+      <p class="section-note">I adopt tools quickly because I build with them, not just use them.</p>
+      <ul class="plain">
+        <li>Notion: day-by-day operating plans with owners, status and deadlines</li>
+        <li>Automations (n8n): intake form to CRM with Telegram alerts; Telegram messages filed to Notion with automatic replies</li>
+        <li>ERPNext: inventory and sales record management</li>
+        <li>Daily tools: Google Workspace, Slack, Telegram, spreadsheets</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="closing">
+    <h2>The part that matters most</h2>
+    <p>An assistant to a founder handles money, documents and private information. I run my own company's funds, credentials and customer data — discretion isn't a policy I follow, it's how I keep my own business alive.</p>
+    <div class="langs">
+      <span>Amharic — native</span>
+      <span>English — professional</span>
+      <span>BSc Computer Science, HiLCoE, 2026</span>
+    </div>
+    <p>If this reads like the person you need, I'm one message away: <a href="mailto:semrey14@gmail.com">semrey14@gmail.com</a> or <a href="https://t.me/semreyy">Telegram</a>.</p>
+    <p class="fine">References and supporting documents available on request.</p>
+  </section>
+
+</div>
+</body>
+</html>
